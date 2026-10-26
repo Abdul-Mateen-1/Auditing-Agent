@@ -27,6 +27,8 @@ This is a development review, not an agent-generated repository audit report.
 - Restricted containers to a non-root user, read-only filesystems, no network, no capabilities,
   no privilege escalation, and limited processes, CPU, memory, temporary storage and time.
 - Bounded captured output while draining excess data; remove containers even after a timeout.
+- Anchored credential-assignment matching at identifier starts to avoid quadratic scanning
+  on long, unbroken output while preserving assignment redaction.
 - Added Git status without optional index locks and rejected internal symlink paths.
 - Required successful file inventory before accepting a final report. An unavailable execution
   check alone cannot produce a completed clean audit.

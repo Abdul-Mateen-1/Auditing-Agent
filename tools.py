@@ -11,7 +11,7 @@ MAX_FILES = 10_000
 MAX_MATCHES = 50
 SKIP_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__"}
 _SECRET_ASSIGNMENT = re.compile(
-    r'(?i)((?:[\w-]*(?:password|passwd|secret|token|api[_-]?key|access[_-]?key)[\w-]*)[\s"\']*[:=]\s*)([^\r\n]+)'
+    r'(?i)((?<![\w-])(?:[\w-]*(?:password|passwd|secret|token|api[_-]?key|access[_-]?key)[\w-]*)[\s"\']*[:=]\s*)([^\r\n]+)'
 )
 _SECRET_VALUES = re.compile(
     r"AIza[\w-]{30,}|AKIA[0-9A-Z]{16}|gh[pousr]_[\w]{20,}|github_pat_[\w]+|AQ\.[\w-]{30,}|sk-[\w-]{20,}"
