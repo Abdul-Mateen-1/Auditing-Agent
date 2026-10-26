@@ -1,4 +1,12 @@
 .venv/
+.venv-win/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+audit-trace.jsonl
+report.json
+tmp/
 __pycache__/
 *.py[cod]
 temp-repo/
